@@ -1,9 +1,11 @@
 pipeline {
   agent any
   stages {
-    stage('build') {
+    stage('print') {
       steps {
-        sh 'mvn clean install'
+        sh '''
+          echo $env.message
+        '''
       }
     }
   }
