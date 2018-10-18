@@ -4,7 +4,7 @@ pipeline {
     stage('print') {
       steps {
         sh '''
-          echo $env.message
+          echo ${env.message}
         '''
       }
     }
